@@ -1,0 +1,22 @@
+"""
+Question:
+Given a sentence that consists of some words separated by a single space, and a searchWord, check if searchWord is a prefix of any word in sentence.
+Return the index of the word in sentence (1-indexed) where searchWord is a prefix of this word. If searchWord is a prefix of more than one word, 
+return the index of the first word (minimum index). If there is no such word return -1.
+A prefix of a string s is any leading contiguous substring of s.
+"""
+
+# Code
+
+def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
+    l = len(searchWord)
+    list1 = sentence.split(' ')
+    list2 = []
+    for x in list1:
+        if searchWord == x[:l]:
+            index1 = list1.index(x)
+            list2.append(index1 + 1)
+    if list2 == []:
+        return -1
+    else:
+        return min(list2)
