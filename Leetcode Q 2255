@@ -1,0 +1,22 @@
+"""
+Question:
+You are given a string array words and a string s, where words[i] and s comprise only of lowercase English letters.
+Return the number of strings in words that are a prefix of s.
+A prefix of a string is a substring that occurs at the beginning of the string. A substring is a contiguous sequence of characters within a string.
+"""
+
+# Code
+
+def countPrefixes(self, words: List[str], s: str) -> int:
+    count = 0
+    l = len(s)
+    for x in words:
+        if x == s:
+            count += 1
+        elif x == s[:l-1] or x == s[:l-2] or x == s[:l-3] or x == s[:l-4] or x == s[:l-5] or x == s[:l-6] or x == s[:l-7] or x == s[:l-8] or 
+x == s[:l-9] or x == s[:l-10] or x == s[:l-11]:
+            count += 1
+        elif x in s[0]:
+            count += 1
+    return count
+                     
