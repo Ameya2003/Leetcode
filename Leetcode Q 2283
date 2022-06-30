@@ -1,0 +1,17 @@
+"""
+Question:
+You are given a 0-indexed string num of length n consisting of digits.
+Return true if for every index i in the range 0 <= i < n, the digit i occurs num[i] times in num, otherwise return false.
+"""
+
+# Code:
+
+def digitCount(self, num: str) -> bool:
+    list1 = list(num)
+    list2 = [int(i) for i in list1]
+    for x in range(len(list2)):
+        count = list2.count(x)
+        if count != list2[x]:
+            return False
+    return True
+       
