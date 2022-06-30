@@ -1,0 +1,20 @@
+"""
+Question:
+Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] you have to count the number 
+of valid j's such that j != i and nums[j] < nums[i].
+Return the answer in an array.
+"""
+
+# Code:
+
+def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+    main_list = []
+    for x in range(len(nums)):
+        num = nums[x]
+        count = 0
+        new_list = nums[:x] + nums[x + 1:]
+        for y in new_list:
+            if y < num:
+                count += 1
+        main_list.append(count)
+    return main_list
