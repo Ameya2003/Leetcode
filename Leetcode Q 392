@@ -1,0 +1,22 @@
+"""
+Question:
+Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing 
+the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+"""
+
+# Code
+
+def isSubsequence(self, s: str, t: str) -> bool:
+    list1 = list(s)
+    list2 = list(t)
+        
+    for i in list1:
+        if i in list2:
+            list2 = list2[list2.index(i) + 1:]
+        else:
+        #print ("Did not find the subsequence !!!")
+            return False
+        
+        #print ("found the subsequence")
+    return True
