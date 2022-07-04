@@ -1,0 +1,20 @@
+"""
+Question:
+Given an integer x, return true if x is palindrome integer.
+An integer is a palindrome when it reads the same backward as forward.
+"""
+
+# Code:
+
+def isPalindrome(self, integer_input: int) -> bool:
+    if integer_input < 0:
+        return False
+    list1 = [int(x) for x in str(integer_input)]
+    orig_list = list(list1)
+    orig_list.reverse()
+    if orig_list == list1:
+        print ("Palindrome found")
+        return True
+    else:
+        print ("Not a palindrome")
+        return False
