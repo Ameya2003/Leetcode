@@ -1,0 +1,19 @@
+"""
+Question:
+You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from 
+most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+Increment the large integer by one and return the resulting array of digits.
+"""
+
+# Code:
+
+def plusOne(self, digits: list) -> list:
+    a = int("".join(map(str, digits)))
+    print(a)
+    new_element = a + 1
+    res = [int(x) for x in str(new_element)]
+    digits.clear()
+    new_list = digits + res
+    return new_list
+
+
